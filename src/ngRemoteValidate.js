@@ -60,6 +60,7 @@
                             addToCache( response );    
                         }
                         ngModel.$setValidity( directiveId, isValid );
+                        ngModel.$error.ngRemoteError = data.message;
                         el.removeClass( 'ng-processing' );
                         ngModel.$processing = false;
                     };
